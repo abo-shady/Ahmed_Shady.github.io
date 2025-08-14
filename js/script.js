@@ -280,34 +280,23 @@ function animateSkillBars() {
 
 // ===== PROJECT FILTER =====
 function initProjectFilter() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    // Project filter disabled - all projects are shown by default
     const projectCards = document.querySelectorAll('.project-card');
     
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Filter projects
-            filterProjects(filter, projectCards);
-        });
+    // Make sure all project cards are visible
+    projectCards.forEach(card => {
+        card.classList.remove('hide');
+        card.classList.add('show');
+        card.style.display = 'block';
     });
 }
 
 function filterProjects(filter, cards) {
+    // Filter functionality disabled - all projects remain visible
     cards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        
-        if (filter === 'all' || category === filter) {
-            card.classList.remove('hide');
-            card.classList.add('show');
-        } else {
-            card.classList.remove('show');
-            card.classList.add('hide');
-        }
+        card.classList.remove('hide');
+        card.classList.add('show');
+        card.style.display = 'block';
     });
 }
 
