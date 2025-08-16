@@ -44,10 +44,13 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
     font-family: var(--font-secondary);
+    overflow-x: hidden;
+    min-width: 320px;
     line-height: 1.6;
     color: var(--text-light);
     background: var(--bg-dark);
@@ -58,6 +61,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--container-padding);
+    width: 100%;
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -1177,6 +1181,41 @@ body {
     
     .nav-toggle.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .skills-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .skill-category {
+        padding: 30px 20px;
+    }
+    
+    .category-header {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .category-header i {
+        font-size: 1.5rem;
+    }
+    
+    .category-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .skill-item {
+        padding: 15px 10px;
+    }
+    
+    .skill-item h4 {
+        font-size: 0.9rem;
     }
     
     .hero-title {
