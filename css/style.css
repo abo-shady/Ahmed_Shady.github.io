@@ -904,6 +904,122 @@ body {
     font-weight: 500;
 }
 
+/* ===== EXPERIENCE SECTION ===== */
+.experience {
+    padding: var(--section-padding);
+    background: var(--primary-color);
+    position: relative;
+}
+
+.experience-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.experience-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: var(--border-radius-large);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gold-color), var(--highlight-color));
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.experience-title h3 {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.company-location {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.company {
+    font-size: 1.1rem;
+    color: var(--gold-color);
+    font-weight: 500;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.experience-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(243, 156, 18, 0.1);
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    color: var(--gold-color);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.experience-duration i {
+    font-size: 0.9rem;
+}
+
+.experience-description {
+    margin-top: 20px;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.experience-list li:last-child {
+    margin-bottom: 0;
+}
+
+.experience-list li i {
+    color: var(--gold-color);
+    font-size: 0.9rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact {
     padding: var(--section-padding);
